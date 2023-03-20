@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { FeedbackOptions, Statisics, Section, Notification } from './feedback';
+import { FeedbackOptions, Statistics, Section, Notification } from './feedback';
 
 export class App extends Component {
   state = {
@@ -26,7 +26,7 @@ export class App extends Component {
           onLeaveFeedback={this.onLeaveFeedback}
         />
         {this.countTotalFeedback() ? (
-          <Statisics
+          <Statistics
             good={this.state.good}
             neutral={this.state.neutral}
             bad={this.state.bad}
