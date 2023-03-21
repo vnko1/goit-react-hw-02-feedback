@@ -8,8 +8,8 @@ export class App extends Component {
     bad: 0,
   };
 
-  onLeaveFeedback = type =>
-    this.setState(previouseState => ({ [type]: previouseState[type] + 1 }));
+  onLeaveFeedback = option =>
+    this.setState(previouseState => ({ [option]: previouseState[option] + 1 }));
 
   countTotalFeedback = () =>
     this.state.good + this.state.neutral + this.state.bad;
@@ -22,7 +22,7 @@ export class App extends Component {
     return (
       <Section title={'Please leave feedback'}>
         <FeedbackOptions
-          options={{ good: 'Good', neutral: 'Neutral', bad: 'Bad' }}
+          options={Object.keys(this.state)}
           onLeaveFeedback={this.onLeaveFeedback}
         />
         {this.countTotalFeedback() ? (
