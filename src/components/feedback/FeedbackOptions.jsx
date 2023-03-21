@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import { FeedbackButton } from './Feedback.styled';
+import { ButtonContainer, FeedbackButton } from './Feedback.styled';
 
 const FeedbackOptions = ({ onLeaveFeedback, options }) => {
   const { good, neutral, bad } = options;
 
   return (
-    <>
+    <ButtonContainer>
       <FeedbackButton
         type="button"
         onClick={() => onLeaveFeedback(good.toLowerCase())}
@@ -24,7 +24,7 @@ const FeedbackOptions = ({ onLeaveFeedback, options }) => {
       >
         {bad}
       </FeedbackButton>
-    </>
+    </ButtonContainer>
   );
 };
 
