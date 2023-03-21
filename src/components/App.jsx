@@ -15,7 +15,10 @@ export class App extends Component {
     this.state.good + this.state.neutral + this.state.bad;
 
   countPositiveFeedbackPercentage = () => {
-    return Math.floor((this.state.good * 100) / this.countTotalFeedback());
+    const total = this.countTotalFeedback();
+    return total
+      ? Math.floor((this.state.good * 100) / this.countTotalFeedback())
+      : 0;
   };
 
   render() {
