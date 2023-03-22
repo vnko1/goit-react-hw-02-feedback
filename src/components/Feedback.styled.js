@@ -40,12 +40,6 @@ const MessageText = styled.p`
   font-weight: 600;
 `;
 
-const StatTitle = styled.h2`
-  text-align: center;
-  font-size: 16px;
-  font-weight: 600;
-`;
-
 const StatText = styled.p`
   text-align: center;
 `;
@@ -56,6 +50,5 @@ export {
   ButtonContainer,
   FeedbackButton,
   MessageText,
-  StatTitle,
   StatText,
 };
